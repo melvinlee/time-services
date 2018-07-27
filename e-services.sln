@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webfrontend", "src\webfrontend\webfrontend\webfrontend.csproj", "{7B9512EA-EFE3-419A-BF89-FA87D1138AB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webfrontend", "src\webfrontend\webfrontend.csproj", "{7B9512EA-EFE3-419A-BF89-FA87D1138AB7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend", "src\backend\backend\backend.csproj", "{8107821F-0E7A-4686-9BFE-AC339A200979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend", "src\backend\backend.csproj", "{8107821F-0E7A-4686-9BFE-AC339A200979}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
