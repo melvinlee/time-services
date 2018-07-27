@@ -33,6 +33,12 @@ namespace webfrontend
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
             });
 
+            services.AddHttpClient("BarServices", client =>
+            {
+                client.BaseAddress = new Uri(Configuration.GetValue<string>("BACKEND_URL_BAR"));
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

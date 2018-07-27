@@ -30,13 +30,21 @@ namespace webfrontend.Controllers
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
+            // foo backend
             var client = _httpClientFactory.CreateClient("FooServices");
             var fooResult =  await client.GetAsync("/api");
             stopwatch.Stop();
 
             var fooReturnValue = $"{Math.Round((decimal)stopwatch.ElapsedMilliseconds / 1000, 2)} secs {_configuration.GetValue<string>("BACKEND_URL_FOO")} -> {fooResult.StatusCode}";
 
-            return new string[] { $"frontend:{version} (host: {Environment.MachineName})", fooReturnValue };
+            //bar backend
+            stopwatch.Restart();
+            var barResult = await client.GetAsync("/api");
+            stopwatch.Stop();
+
+            var barReturnValue = $"{Math.Round((decimal)stopwatch.ElapsedMilliseconds / 1000, 2)} secs {_configuration.GetValue<string>("BACKEND_URL_BAR")} -> {fooResult.StatusCode}";
+
+            return new string[] { $"frontend:{version} (host: {Environment.MachineName})", fooReturnValue, barReturnValue };
         }
     }
 }
