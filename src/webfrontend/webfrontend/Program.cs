@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
 namespace webfrontend
 {
@@ -19,6 +12,11 @@ namespace webfrontend
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                // Kubernetes Liveness and Readiness Probes
+                // The kubelet uses readiness probes to know when a Container is ready to start accepting traffic.
+                .UseHealthChecks("/readiness")
+                // The kubelet uses liveness probes to know when to restart a Container.
+                .UseHealthChecks("/liveness")
                 .UseStartup<Startup>();
     }
 }
