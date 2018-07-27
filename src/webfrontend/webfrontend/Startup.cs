@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.HealthChecks;
+using System;
 using System.Threading.Tasks;
 
 namespace webfrontend
@@ -24,6 +25,12 @@ namespace webfrontend
             {
                 checks.AddValueTaskCheck("HTTP Endpoint", () => new
                     ValueTask<IHealthCheckResult>(HealthCheckResult.Healthy("Ok")));
+            });
+
+            services.AddHttpClient("FooServices", client =>
+            {
+                client.BaseAddress = new Uri(Configuration.GetValue<string>("BACKEND_URL_FOO"));
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
