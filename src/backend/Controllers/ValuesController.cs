@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
-namespace backend.Controllers
+namespace BackendFoo.Controllers
 {
     [Route("api/")]
     [ApiController]

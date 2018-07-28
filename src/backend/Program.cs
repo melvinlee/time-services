@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore;
+﻿using backend;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace backend
+namespace BackendFoo
 {
     public class Program
     {
