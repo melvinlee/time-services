@@ -22,10 +22,11 @@ namespace WebFrontend.HttpClients
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            var fooResult = await _httpClient.GetAsync("/api");
+            var httpResponseMessage = await _httpClient.GetAsync("/api");
+            var contents = await httpResponseMessage.Content.ReadAsStringAsync();
             stopwatch.Stop();
 
-            var result = $"{Math.Round((decimal)stopwatch.ElapsedMilliseconds / 1000, 2)} secs {_configuration.GetValue<string>("BACKEND_URL_FOO")} -> {fooResult.StatusCode}";
+            var result = $"{Math.Round((decimal)stopwatch.ElapsedMilliseconds / 1000, 2)} secs {_configuration.GetValue<string>("BACKEND_URL_FOO")} -> {httpResponseMessage.StatusCode} [{contents}]";
             return result;
         }
     }
