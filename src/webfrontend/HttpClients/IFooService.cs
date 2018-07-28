@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace webfrontend.HttpClients
+namespace WebFrontend.HttpClients
 {
     public interface IFooService
     {

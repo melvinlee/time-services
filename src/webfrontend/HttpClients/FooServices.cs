@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 
-namespace webfrontend.HttpClients
+namespace WebFrontend.HttpClients
 {
     public class FooService : IFooService
     {

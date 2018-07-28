@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace webfrontend
+namespace WebFrontend
 {
     public class Program
     {

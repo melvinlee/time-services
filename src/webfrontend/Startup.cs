@@ -6,10 +6,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.HealthChecks;
 using System;
 using System.Threading.Tasks;
-using webfrontend.HttpClients;
+using WebFrontend.HttpClients;
 using static BuildingBlock.Resilience.HtpClientResilience;
 
-namespace webfrontend
+namespace WebFrontend
 {
     public class Startup
     {

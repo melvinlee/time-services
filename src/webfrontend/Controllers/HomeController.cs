@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using webfrontend.HttpClients;
+using WebFrontend.HttpClients;
 
 namespace webfrontend.Controllers
 {
