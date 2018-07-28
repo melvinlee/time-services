@@ -32,8 +32,8 @@ namespace WebFrontend
 
             services.AddHttpClient<IFooService, FooService>(client => {
                 client.BaseAddress = new Uri(Configuration.GetValue<string>("BACKEND_URL_FOO"));
-                client.DefaultRequestHeaders.Add("Accept", "application/json");
-            });
+                //client.DefaultRequestHeaders.Add("Accept", "application/json");
+            }).AddPolicyHandler(GetCircuitBreakerPolicy());
 
             services.AddHttpClient<IBarService, BarService>(client => {
                 client.BaseAddress = new Uri(Configuration.GetValue<string>("BACKEND_URL_BAR"));
