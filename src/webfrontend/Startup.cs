@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.HealthChecks;
 using System;
 using System.Threading.Tasks;
+using webfrontend.HttpClients;
 
 namespace webfrontend
 {
@@ -21,20 +22,19 @@ namespace webfrontend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddHealthChecks(checks =>
             {
                 checks.AddValueTaskCheck("HTTP Endpoint", () => new
                     ValueTask<IHealthCheckResult>(HealthCheckResult.Healthy("Ok")));
             });
 
-            services.AddHttpClient("FooServices", client =>
-            {
+            services.AddHttpClient<IFooService, FooService>(client => {
                 client.BaseAddress = new Uri(Configuration.GetValue<string>("BACKEND_URL_FOO"));
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
             });
 
-            services.AddHttpClient("BarServices", client =>
-            {
+            services.AddHttpClient<IBarService, BarService>(client => {
                 client.BaseAddress = new Uri(Configuration.GetValue<string>("BACKEND_URL_BAR"));
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
             });
