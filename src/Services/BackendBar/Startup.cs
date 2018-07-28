@@ -34,7 +34,7 @@ namespace BackendBar
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseOwin(x => x.UseNancy(opt => opt.Bootstrapper = new BootStrapper(Configuration)));
         }
     }
