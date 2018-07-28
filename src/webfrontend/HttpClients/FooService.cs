@@ -19,8 +19,6 @@ namespace WebFrontend.HttpClients
 
         public async Task<string> GetResult()
         {
-            var response = await _httpClient.GetAsync("aspnet/repos");
-
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 

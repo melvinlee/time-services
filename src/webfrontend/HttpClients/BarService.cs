@@ -26,7 +26,7 @@ namespace WebFrontend.HttpClients
             var contents = await httpResponseMessage.Content.ReadAsStringAsync();
             stopwatch.Stop();
 
-            var result = $"{Math.Round((decimal)stopwatch.ElapsedMilliseconds / 1000, 2)} secs {_configuration.GetValue<string>("BACKEND_URL_FOO")} -> {httpResponseMessage.StatusCode} [{contents}]";
+            var result = $"{Math.Round((decimal)stopwatch.ElapsedMilliseconds / 1000, 2)} secs {_configuration.GetValue<string>("BACKEND_URL_BAR")} -> {httpResponseMessage.StatusCode} [{contents}]";
             return result;
         }
     }
