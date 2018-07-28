@@ -7,7 +7,7 @@ namespace BackendFoo.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        public readonly IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
 
         public ValuesController(IConfiguration configuration)
         {
@@ -19,10 +19,10 @@ namespace BackendFoo.Controllers
         [HttpGet()]
         public ActionResult<string> Get()
         {
-            var service_name = _configuration.GetValue<string>("SERVICE_NAME");
+            var serviceName = _configuration.GetValue<string>("SERVICE_NAME");
             var version = _configuration.GetValue<string>("VERSION") ?? "v1";
 
-            return $"backend-{service_name}:{version}";
+            return $"backend-{serviceName}:{version}";
         }
     }
 }
