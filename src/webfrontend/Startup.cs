@@ -7,6 +7,7 @@ using Microsoft.Extensions.HealthChecks;
 using System;
 using System.Threading.Tasks;
 using webfrontend.HttpClients;
+using static BuildingBlock.Resilience.HtpClientResilience;
 
 namespace webfrontend
 {
@@ -37,7 +38,7 @@ namespace webfrontend
             services.AddHttpClient<IBarService, BarService>(client => {
                 client.BaseAddress = new Uri(Configuration.GetValue<string>("BACKEND_URL_BAR"));
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
-            });
+            }).AddPolicyHandler(GetRetryPolicy()); ;
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
