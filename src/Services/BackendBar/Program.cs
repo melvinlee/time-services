@@ -12,6 +12,7 @@ namespace BackendBar
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseReadinessAndLivenessHealthChecks()
                 .UseStartup<Startup>();
     }
 }
