@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlock.Http\BuildingBlock.Http.csproj" />
     <ProjectReference Include="..\BuildingBlocks\BuildingBlock.Resilience\BuildingBlock.Resilience.csproj" />
   </ItemGroup>
 
