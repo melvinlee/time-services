@@ -15,7 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendBar", "src\Services\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlock.Http", "src\BuildingBlocks\BuildingBlock.Http\BuildingBlock.Http.csproj", "{3F5A98DC-566A-444C-B17C-77C558184E46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlock.HealthCheck", "src\BuildingBlocks\BuildingBlock.HealthCheck\BuildingBlock.HealthCheck.csproj", "{F46D2BAD-1CD2-4085-837B-F81C9D3A14C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlock.HealthCheck", "src\BuildingBlocks\BuildingBlock.HealthCheck\BuildingBlock.HealthCheck.csproj", "{F46D2BAD-1CD2-4085-837B-F81C9D3A14C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{14257E30-3105-4762-B926-9BE6DA1BBB48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{05C72877-56CA-4E94-9FCD-2130FF2CEA4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendFoo.UnitTests", "test\Services\BackendFoo.UnitTests\BackendFoo.UnitTests.csproj", "{42361E54-CC81-40A1-85C5-1D9F72277CCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +53,10 @@ Global
 		{F46D2BAD-1CD2-4085-837B-F81C9D3A14C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F46D2BAD-1CD2-4085-837B-F81C9D3A14C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F46D2BAD-1CD2-4085-837B-F81C9D3A14C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42361E54-CC81-40A1-85C5-1D9F72277CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42361E54-CC81-40A1-85C5-1D9F72277CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42361E54-CC81-40A1-85C5-1D9F72277CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42361E54-CC81-40A1-85C5-1D9F72277CCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +65,8 @@ Global
 		{49CD88C1-D6B5-49CB-9361-A09574634A9A} = {45A27CD3-EF72-43E2-8A58-8155725DCB6E}
 		{3F5A98DC-566A-444C-B17C-77C558184E46} = {45A27CD3-EF72-43E2-8A58-8155725DCB6E}
 		{F46D2BAD-1CD2-4085-837B-F81C9D3A14C5} = {45A27CD3-EF72-43E2-8A58-8155725DCB6E}
+		{05C72877-56CA-4E94-9FCD-2130FF2CEA4F} = {14257E30-3105-4762-B926-9BE6DA1BBB48}
+		{42361E54-CC81-40A1-85C5-1D9F72277CCC} = {05C72877-56CA-4E94-9FCD-2130FF2CEA4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D297FBAA-1FA2-42D7-B509-CE0E1EFAE8A1}
