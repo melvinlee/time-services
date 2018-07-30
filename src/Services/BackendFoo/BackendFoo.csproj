@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore.HealthChecks" Version="1.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\BuildingBlock.HealthCheck\BuildingBlock.HealthCheck.csproj" />
+  </ItemGroup>
+
 </Project>
