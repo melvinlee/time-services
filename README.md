@@ -1,0 +1,1 @@
+[![Build status](https://melvinlee-ava.visualstudio.com/aks-node/_apis/build/status/aks-node-E-Service%20CI)](https://melvinlee-ava.visualstudio.com/aks-node/_build/latest?definitionId=3)
