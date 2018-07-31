@@ -12,7 +12,11 @@ namespace BackendFoo
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseReadinessAndLivenessHealthChecks()
+                .UseReadinessAndLivenessHealthChecks(x =>
+                {
+                    x.LivenessPath = "/liveness";
+                    x.ReadinessPath = "/readiness";
+                })
                 .UseStartup<Startup>();
     }
 }
