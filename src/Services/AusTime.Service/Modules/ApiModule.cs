@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Nancy;
+using System;
 
 namespace BackendBar.Modules
 {
@@ -11,11 +12,11 @@ namespace BackendBar.Modules
         {
             Get("/", args =>
             {
-                var serviceName = configuration.GetValue<string>("SERVICE_NAME");
                 var version = configuration.GetValue<string>("VERSION") ?? "v1";
                 var secret = configuration.GetValue<string>("SECRET");
+                var time = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time"));
 
-                return $"backend-{serviceName} (secret:{secret}):{version}";
+                return $"australia-time: {time} (secret:{secret}) ver:{version}";
             });
         }
     }

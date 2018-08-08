@@ -18,7 +18,7 @@ namespace BackendFoo.UnitTests
             // Act
             var actionResult = controller.Get(); // as ContentResult;
 
-            actionResult.Value.ShouldContain("backend");
+            actionResult.Value.ShouldContain("singapore-time");
 
         }
 

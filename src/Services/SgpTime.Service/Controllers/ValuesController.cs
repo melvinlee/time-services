@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System;
 
 namespace BackendFoo.Controllers
 {
@@ -19,10 +20,10 @@ namespace BackendFoo.Controllers
         [HttpGet()]
         public ActionResult<string> Get()
         {
-            var serviceName = _configuration.GetValue<string>("SERVICE_NAME");
             var version = _configuration.GetValue<string>("VERSION") ?? "v1";
+            var time = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("Singapore Standard Time"));
 
-            return $"backend-{serviceName}:{version}";
+            return $"singapore-time: {time} ver:{version}";
         }
     }
 }

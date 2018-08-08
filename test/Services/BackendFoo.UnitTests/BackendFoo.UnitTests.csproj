@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Services\BackendFoo\BackendFoo.csproj" />
+    <ProjectReference Include="..\..\..\src\Services\SgpTime.Service\SgpTime.Service.csproj" />
   </ItemGroup>
 
 </Project>

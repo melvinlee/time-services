@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:62919/",
+      "applicationUrl": "http://localhost:62909/",
       "sslPort": 0
     }
   },
@@ -15,12 +15,12 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "BackendBar": {
+    "SgpTime.Service": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:62921/"
+      "applicationUrl": "http://localhost:62920/"
     }
   }
 }
