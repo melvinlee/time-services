@@ -21,7 +21,7 @@ namespace BackendFoo.Controllers
         public ActionResult<string> Get()
         {
             var version = _configuration.GetValue<string>("VERSION") ?? "v1";
-            var time = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("Singapore Standard Time"));
+            var time = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("Asia/Singapore"));
 
             return $"singapore-time: {time} ver:{version}";
         }
